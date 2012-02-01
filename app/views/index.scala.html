@@ -1,0 +1,35 @@
+@(message: String)
+
+@main("Welcome to Play 2.0") {
+
+<h1>Welcome to Code Story Qualification</h1>
+
+<h2>This is the list of our items</h2>
+<div class="actions">
+    <p class="buttons">
+        <input type="button" class="btn primary" value="Update Quality"
+               onclick="document.location=document.location">
+    <p>
+</div>
+<table class="table table-stripped">
+    
+    <th>Name</th>
+    <th>Quality</th>
+    <th>SellIn</th>
+    @for(item <- Inn.getInn().getItems()) {
+    <tr>
+        <td>
+            @item.getName()
+        </td>
+        <td>
+            @item.getQuality()
+        </td>
+        <td>
+            @item.getSellIn()
+        </td>
+</tr>
+    }
+
+</table>
+
+}
