@@ -1,4 +1,4 @@
-package models;
+/* package models;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -87,4 +87,4 @@ public class InnTest {
 		Assert.assertTrue(q1 == q2);
 	}
 	
-}
+}*/
