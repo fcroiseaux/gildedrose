@@ -1,7 +1,18 @@
-/* package models;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
+
+import java.util.*;
+
+import play.mvc.*;
+import play.test.*;
+import play.libs.F.*;
+
+import static play.test.Helpers.*;
+import static org.fest.assertions.Assertions.*;
+
+import models.Item;
+import models.Inn;
+
 
 public class InnTest {
 
@@ -14,22 +25,7 @@ public class InnTest {
 		Inn.updateItemQuality(notConjured);
 		Assert.assertTrue((conjured.getQuality() - initialQuality) == 2 * (notConjured.getQuality() - initialQuality));
 	}
-	
-	@Test
-	public void testConjured2() throws Exception {
-		int initialQuality = 6;
-		Item conjured = new Item("Conjured Mana Cake", 3, initialQuality);
-		Item notConjured = new Item("Mana Cake", 3, initialQuality);
-		Inn.updateItemQuality0(conjured);
-		Inn.updateItemQuality0(notConjured);
-		Item conjured2 = new Item("Conjured Mana Cake", 3, initialQuality);
-		Item notConjured2 = new Item("Mana Cake", 3, initialQuality);
-		Inn.updateItemQuality(conjured2);
-		Inn.updateItemQuality(notConjured2);	
-		
-		Assert.assertTrue(conjured.getQuality() == conjured2.getQuality() && 
-				notConjured.getQuality() == notConjured2.getQuality());
-	}
+
 
 	@Test
 	public void testStandard() throws Exception {
@@ -87,4 +83,4 @@ public class InnTest {
 		Assert.assertTrue(q1 == q2);
 	}
 	
-}*/
+}

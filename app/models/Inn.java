@@ -42,12 +42,12 @@ public class Inn {
             updateItemQuality(items.get(i));
     }
 
-    protected static void updateItemQuality(Item item) {
+    public static void updateItemQuality(Item item) {
         QualityUpdaterFactory.createFor(item).updateQualityOf(item);
         SellinUpdaterFactory.createFor(item).updateSellInOf(item);
     }
 
-    private static void updateOldItemQuality(Item item) {
+    public static void updateItemQuality0(Item item) {
         if (!item.getName().equals("Aged Brie")
                 && !item.getName().equals(
                 "Backstage passes to a TAFKAL80ETC concert")) {
