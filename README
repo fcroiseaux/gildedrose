@@ -2,7 +2,7 @@ To run the application you need the latest version of Play 2.0 as of february 01
 git clone git://github.com/playframework/Play20.git
 
 Then
-git clone git@github.com:fcroiseaux/gildedrose.git
+git clone git://github.com/fcroiseaux/gildedrose.git
 cd gildedrose
 play run
 
